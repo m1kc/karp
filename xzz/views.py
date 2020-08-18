@@ -18,7 +18,7 @@ def selfref(request: HttpRequest):
 
 
 def cycle(request: HttpRequest, n: int):
-	if n < 10:
+	if n < 5:
 		return redirect(reverse('cycle', args=(n+1,)))
 	return redirect(reverse('cycle', args=(1,)))
 
