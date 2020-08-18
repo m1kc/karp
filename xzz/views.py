@@ -26,7 +26,7 @@ def cycle(request: HttpRequest, n: int):
 def infinite(request: HttpRequest):
 	def iter():
 		while True:
-			yield 'z'*10000
+			yield '\r\n\r\nz'*10000
 	h = StreamingHttpResponse(iter())
 	h.status_code = 303
 	h['Location'] = '/normal/'
