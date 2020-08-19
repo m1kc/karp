@@ -8,13 +8,13 @@ async def on_request_start(session, trace_config_ctx, params):
 	print("Starting request", params, '\n-----')
 
 async def on_request_end(session, trace_config_ctx, params):
-    print("Ending request", params, '\n-----')
+	print("Ending request", params, '\n-----')
 
 async def on_request_redirect(session, trace_config_ctx, params):
-    print("Redirect", params, '\n-----')
+	print("Redirect", params, '\n-----')
 
 async def on_connection_reuseconn(session, trace_config_ctx, params):
-    print("Connection reused", params, '\n-----')
+	print("Connection reused", params, '\n-----')
 
 async def canon(url: str, timeout=5):
 	trace_config = aiohttp.TraceConfig()
